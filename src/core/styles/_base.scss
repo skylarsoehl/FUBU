@@ -1,1 +1,27 @@
-//
+// global colors
+$primary-main: #427966;
+$priimary-light: #d5eee6;
+$primary-dark: #2d5849;
+
+$secondary-light: #e5e7ee;
+$secondary-main: #b0b3bc;
+$secondary-dark: #8d919c;
+
+$error-main: #df5a45;
+$error-dark: #cb452f;
+
+//mixins
+@mixin no-list-style {
+  list-style: none;
+}
+
+@mixin h1 {
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 120%;
+}
+
+@mixin p {
+  font-size: 22px;
+  line-height: 24px;
+}
