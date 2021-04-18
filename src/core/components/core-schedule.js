@@ -33,8 +33,8 @@ const useStyles = makeStyles(() => ({
         paddingBottom: '24px',
     },
     action: {
-    display: 'flex',
-    justifyContent: 'space-around',
+        display: 'flex',
+        justifyContent: 'space-around',
     }
 }));
 
@@ -45,6 +45,8 @@ export default function Schedule() {
     // let weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     // let weekList = weekdays.map(function(weekday, index) {
     //     return <ScheduleCard
+    // needs prop for props.scheduleData, where scheduleData is a list
+    // of date objects (includes both day of week(string) and array of times).
     // })
 
     return (
@@ -54,9 +56,9 @@ export default function Schedule() {
         <Card className={classes.card}>
             <CardContent>
                 <Typography className={classes.header} >
-                Your Schedule for 4/5 - 4/11
+                    Your Schedule for 4/5 - 4/11
         </Typography>
-        <ScheduleCard/>
+                <ScheduleCard />
             </CardContent>
             <CardActions className={classes.action}>
                 <Button variant="contained" color="secondary">Edit</Button>
