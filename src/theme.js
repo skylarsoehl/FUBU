@@ -31,11 +31,6 @@ const theme = createMuiTheme({
     body1: {
       fontSize: 22,
     },
-    button: {
-      fontWeight: 600,
-      textTransform: "capitalize",
-
-    }
   },
 });
 
