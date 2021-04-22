@@ -8,7 +8,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import theme from '../../theme';
 import { Typography } from '@material-ui/core';
-import CustomizedDialog from './home-modal';
+
+import LearnMoreDialog from './learnmore-modal';
+import SignupDialog from './signup-modal';
 
 
 
@@ -63,13 +65,13 @@ function SignIn() {
                         <Typography variant="h1"> All-in-one platform for community fridges.</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                        <Button className={classes.button} size="large" variant="contained" color="primary">Sign Up</Button>
+                    <SignupDialog/>
                     </Grid>
                     <Grid item xs={12}>
                         <Button className={classes.button} size="large" variant="contained" color="secondary">Login</Button>
                     </Grid>
                     <Grid item xs={12}>
-                        <CustomizedDialog/>
+                        <LearnMoreDialog/>
                     </Grid>
                 </Grid>
             </Grid>

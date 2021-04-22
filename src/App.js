@@ -3,8 +3,6 @@ import theme from "./theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 import SignIn from "./pages/home/home-page";
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import CustomizedDialog from "./pages/home/home-modal";
-
 
 function App() {
   return (
