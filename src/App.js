@@ -1,12 +1,21 @@
 import "./App.css";
 import theme from "./theme";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import SignIn from "./pages/home/home-page";
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import CustomizedDialog from "./pages/home/home-modal";
+
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Typography variant="h1">Hello World</Typography>
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <SignIn/>
+            </Route>
+          </Switch>
+        </Router>
     </ThemeProvider>
   );
 }
