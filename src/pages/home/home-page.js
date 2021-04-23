@@ -4,13 +4,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import SignInPic from '../../assets/Fridge-signin-pic.png';
 import { ReactComponent as FUBULogo } from '../../assets/fubu_logo.svg';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import theme from '../../theme';
 import { Typography } from '@material-ui/core';
 
 import LearnMoreDialog from './learnmore-modal';
 import SignupDialog from './signup-modal';
+import LoginDialog from './login-modal';
 
 
 
@@ -65,13 +65,13 @@ function SignIn() {
                         <Typography variant="h1"> All-in-one platform for community fridges.</Typography>
                     </Grid>
                     <Grid item xs={12}>
-                    <SignupDialog/>
+                        <SignupDialog />
                     </Grid>
                     <Grid item xs={12}>
-                        <Button className={classes.button} size="large" variant="contained" color="secondary">Login</Button>
+                        <LoginDialog />
                     </Grid>
                     <Grid item xs={12}>
-                        <LearnMoreDialog/>
+                        <LearnMoreDialog />
                     </Grid>
                 </Grid>
             </Grid>

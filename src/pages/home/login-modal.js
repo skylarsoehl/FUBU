@@ -90,17 +90,14 @@ export default function LoginDialog() {
     return (
 
         <ThemeProvider theme={theme}>
-            <Button className={classes.button} size="large" variant="contained" color="primary" onClick={handleClickOpen}>Sign Up</Button>
+            <Button className={classes.button} size="large" variant="contained" color="secondary" onClick={handleClickOpen}>Login</Button>
             <Dialog justifyContent="center" onClose={handleClose} open={open}>
                 <DialogTitle onClose={handleClose}>
-                    Create your account
+                   Welcome back!
         </DialogTitle>
                 <DialogContent>
-                <TextField className={classes.input} id="firstNameInput" label="First Name" variant="outlined"/>
-                <TextField className={classes.input} id="lastNameInput"label="Last Name" variant="outlined" />
-                <TextField className={classes.input} id="emailInput" label="Email" variant="outlined" />
-                <TextField className={classes.input} id="passInput" label="Pronouns" variant="outlined" />
-                <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Next</Button>
+                <TextField className={classes.input} label="Email" variant="outlined" />
+                <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Login</Button>
                 </DialogContent>
             </Dialog>
         </ThemeProvider>
