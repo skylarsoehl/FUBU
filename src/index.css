@@ -16,4 +16,9 @@ code {
   width: 345px;
   height: 345px;
 
+ }
+
+.MuiOutlinedInput-input-151 {
+  width: 350px !important;
+  height: 15px !important;
 }
