@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'block',
     },
     bigButtons: {
-        width: '410px',
+        width: '420px',
         height: '77px',
         fontWeight: 400,
         marginTop: '15px',
