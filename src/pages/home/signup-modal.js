@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
     },
     input: {
-    marginBottom: '32px',
-    width: '327px',
+        marginBottom: '22px',
+        width: '327px',
     }
 }));
 
@@ -38,7 +38,7 @@ const styles = (theme) => ({
     title: {
         fontWeight: 600,
         textAlign: 'center',
-        paddingTop: '70px',
+        paddingTop: '50px',
     },
     body: {
         fontSize: '16px',
@@ -96,11 +96,23 @@ export default function LoginDialog() {
                     Create your account
         </DialogTitle>
                 <DialogContent>
-                <TextField className={classes.input} id="firstNameInput" label="First Name" variant="outlined"/>
-                <TextField className={classes.input} id="lastNameInput"label="Last Name" variant="outlined" />
-                <TextField className={classes.input} id="emailInput" label="Email" variant="outlined" />
-                <TextField className={classes.input} id="passInput" label="Pronouns" variant="outlined" />
-                <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Next</Button>
+                    <TextField className={classes.input} id="firstNameInput" label="First Name" variant="outlined" />
+                    <TextField className={classes.input} id="lastNameInput" label="Last Name" variant="outlined" />
+                    <TextField className={classes.input} id="emailInput" label="Email" variant="outlined" />
+                    <TextField className={classes.input}
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password"
+                        variant="outlined"
+                    />
+                    <TextField className={classes.input}
+                        label="Confirm Password"
+                        type="password"
+                        autoComplete="current-password"
+                        variant="outlined"
+                    />
+                    <TextField className={classes.input} id="passInput" label="Pronouns" variant="outlined" />
+                    <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Next</Button>
                 </DialogContent>
             </Dialog>
         </ThemeProvider>
