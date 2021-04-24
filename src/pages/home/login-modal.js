@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)',
     },
     input: {
-    marginBottom: '32px',
-    width: '327px',
+        marginBottom: '32px',
+        width: '327px',
     }
 }));
 
@@ -93,11 +93,17 @@ export default function LoginDialog() {
             <Button className={classes.button} size="large" variant="contained" color="secondary" onClick={handleClickOpen}>Login</Button>
             <Dialog justifyContent="center" onClose={handleClose} open={open}>
                 <DialogTitle onClose={handleClose}>
-                   Welcome back!
+                    Welcome back!
         </DialogTitle>
                 <DialogContent>
-                <TextField className={classes.input} label="Email" variant="outlined" />
-                <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Login</Button>
+                    <TextField className={classes.input} label="Email" variant="outlined" />
+                    <TextField className={classes.input} 
+                        label="Password"
+                        type="password"
+                        autoComplete="current-password"
+                        variant="outlined"
+                    />
+                    <Button className={classes.button} size="large" variant="contained" disabled={"disabled"} color="primary" onClick={handleClickOpen}>Login</Button>
                 </DialogContent>
             </Dialog>
         </ThemeProvider>
