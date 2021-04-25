@@ -149,6 +149,10 @@ function AdminDashboard() {
     );
   }, []);
 
+  if (modalState) {
+    return "";
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container xs={12} className={classes.root}>
