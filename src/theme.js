@@ -16,9 +16,9 @@ const theme = createMuiTheme({
       dark: "#8D919C",
       contrastText: "#fff",
     },
-    warning: {
+    error: {
       main: "#DF5A45",
-      dark: "CB452F",
+      dark: "#CB452F",
       contrastText: "#fff",
     },
   },
@@ -26,6 +26,10 @@ const theme = createMuiTheme({
     fontFamily: font,
     h1: {
       fontSize: 33,
+      fontWeight: 600,
+    },
+    h3: {
+      fontSize: 24,
       fontWeight: 600,
     },
     body1: {
