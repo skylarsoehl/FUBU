@@ -18,18 +18,17 @@ const useStyles = makeStyles((theme) => ({
 const CoreSelect = (props) => {
   const classes = useStyles();
   const [state, setState] = React.useState('');
-  var optionLists = [""];
 
 
-  function handleChange(event) {
-    setState(event.target.value);
-  }
-
+  const handleChange = (event) => {
+    const name = event.target.value;
+    setState({option : name});
+  };
 
   return (
     <FormControl className={classes.formControl}>
-      {/* <InputLabel>{props.optionCategory}</InputLabel> */}
-      <Select value={optionLists} onChange={handleChange}>
+      {/* <InputLabel>{state.option}</InputLabel> */}
+      <Select value={state.option} onChange={handleChange}>
         {props.optionLists.map((value) => (
           <MenuItem key={value} value={value}>
             {value}
