@@ -56,10 +56,10 @@ const DialogTitle = withStyles(styles)((props) => {
 const DialogContent = withStyles((theme) => ({
   root: {
     paddingTop: theme.spacing(2),
-    padding: "30px",
+    padding: "50px",
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "center",
+    fontSize: '24px',
   },
 }))(MuiDialogContent);
 
@@ -89,13 +89,13 @@ export default function NextStepsModal() {
               </Link>
             </Grid>
           </Grid>
-          <Grid item>
-            <Typography variant="h2">
+          <Grid item xs={12}>
+            <Typography variant="h3">
               2. Create a fridge check-in/ maintenence form
             </Typography>
           </Grid>
-          <Grid item>
-            <Typography variant="h2">
+          <Grid item xs={12}>
+            <Typography variant="h3">
               3. Add a task to your table of action items
             </Typography>
           </Grid>
