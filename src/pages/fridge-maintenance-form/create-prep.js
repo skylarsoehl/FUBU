@@ -96,15 +96,15 @@ const useStyles = makeStyles((theme) => ({
           <Grid
             container
             direction="row"
-            // justify="space-evenly"
-            alignItems="flex-start">
+            justify="left"
+            alignItems="center">
               <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="outlined-basic" label="Title" variant="outlined" size="small"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </form>
-              <DropdownSelect className={classes.root}/>
+              <DropdownSelect className={classes.root} fontSize="small"/>
         </Grid>
 
         {/* new item details */}
