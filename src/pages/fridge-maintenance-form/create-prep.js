@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
           height: "10vh"
         },
             },
-    //   alignItems: "center",
     },
     text: {
         marginLeft: 15,
