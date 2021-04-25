@@ -2,11 +2,11 @@ import "./App.css";
 import theme from "./theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 import SignIn from "./pages/home/home-page";
-import CreateFridge from "./pages/create-fridge-workspace";
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import JoinWorkSpace from "./pages/create-workspace";
-import DashOrg from "./pages/dashboard/dashboard-organizer";
-
+import ChooseFridgeName from "./pages/admin/choose-fridge-name";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import JoinOrCreate from "./pages/sign-up/join-or-create";
+import AdminDashboard from "./pages/admin/admin-dashboard";
+import SignUp from "./pages/sign-up/sign-up";
 
 function App() {
   return (
@@ -16,14 +16,19 @@ function App() {
           <Route path="/" exact>
             <SignIn />
           </Route>
-          <Route path="/createfridge" exact>
-            <CreateFridge />
+          <Route path="/sign-up" exact>
+            <SignUp />
           </Route>
-          <Route path="/workspace" exact>
-            <JoinWorkSpace />
+          <Route path="/create-community-space" exact>
+            <ChooseFridgeName />
           </Route>
-          <Route path="/dashorg" exact>
-            <DashOrg />
+          <Route
+            path="/join-or-create"
+            component={JoinOrCreate}
+            render={(props) => <JoinOrCreate {...props} />}
+          />
+          <Route path="/dashboard-admin" exact>
+            <AdminDashboard />
           </Route>
         </Switch>
       </Router>
