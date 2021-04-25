@@ -28,7 +28,7 @@ const CoreSelect = (props) => {
   return (
     <FormControl className={classes.formControl}>
       {/* <InputLabel>{state.option}</InputLabel> */}
-      <Select value={state.option} onChange={handleChange}>
+      <Select id="select" value={state.option} onChange={handleChange}>
         {props.optionLists.map((value) => (
           <MenuItem key={value} value={value}>
             {value}

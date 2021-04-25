@@ -18,6 +18,8 @@ import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import ItemCard from './item-card';
+import ItemDropDown from './item-dropdown'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,60 +77,6 @@ const useStyles = makeStyles((theme) => ({
         );
       }
 
-      function ItemCard() {
-        return (
-
-          <Card className={classes.root} elevation={3}>
-          <CardContent>
-        {/* new item section1 */}
-        <Grid container item>
-          <Grid
-            container
-            direction="row"
-            justify="space-between"
-            alignItems="flex-start">
-              <div><Typography fontWeight>Item 1</Typography></div>
-              <div><Typography>Question Type</Typography></div>
-              <Button><AttachFileIcon fontSize="large"/></Button>
-        </Grid>
-
-        {/* new item section2 */}
-          <Grid
-            container
-            direction="row"
-            justify="left"
-            alignItems="center">
-              <form className={classes.root} noValidate autoComplete="off">
-                <TextField id="outlined-basic" label="Title" variant="outlined" size="small"/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </form>
-              <DropdownSelect className={classes.root} fontSize="small"/>
-        </Grid>
-
-        {/* new item details */}
-          <Grid
-            container>
-              {/* <Checkbox disabled size='medium'/> */}
-              <TextField id="outlined-basic" fullWidth margin="normal" label="answer option" />
-          </Grid>
-
-        {/* required? */}
-        {/* <Grid container item> */}
-          <Grid
-            container
-            justify="flex-end"
-            alignItems="center">
-              required? &nbsp;&nbsp;<CoreSwitch/>
-              <Button><DeleteOutlineIcon margin="dense" fontSize="large"/></Button>
-          </Grid>
-        </Grid>
-        
-        </CardContent></Card>
-        );
-      }
-
       var ListItemCard = [];
     
       function addNewItem() {
@@ -164,14 +112,13 @@ const useStyles = makeStyles((theme) => ({
                   alignItems="center"
                   spacing={1}>
                   <form className={classes.root} noValidate autoComplete="off">
-                    <TextField id="outlined-basic" margin="dense" label="Title" color="#FFFFFF" variant="outlined" size="small"/>
+                    <TextField id="outlined-basic" margin="dense" label="Check-in Form Title" color="#FFFFFF" variant="outlined" size="small"/>
                     </form>
                     <Button variant="contained" color="primary">Publish Form</Button>
                 </Grid>
               </Grid>
 
-              <ItemCard/>
-              {ListItemCard}
+              <ItemDropDown/>
               <Grid container item>
               <Grid container justify="center"><Button onClick={addNewItem}>+ add new item</Button></Grid>
               </Grid>

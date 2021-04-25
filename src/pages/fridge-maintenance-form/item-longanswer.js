@@ -73,7 +73,7 @@ function handleChange() {
     
 }
 
-export default function ItemCard() {
+export default function ItemShortAns() {
     const classes = useStyles();
 
     return (
@@ -81,8 +81,10 @@ export default function ItemCard() {
       <Card className={classes.root} elevation={3}>
       <CardContent>
     {/* new item section1 */}
-    <Grid container item>
-      <Grid
+    <Grid container
+      direction="column"
+      spacing={1}>
+    <Grid
         container
         direction="row"
         justify="flex-start"
@@ -121,9 +123,9 @@ export default function ItemCard() {
 
     {/* new item details */}
       <Grid
-        container>
-          {/* <Checkbox disabled size='medium'/> */}
-          <TextField id="outlined-basic" fullWidth margin="normal" label="answer option" />
+        container
+        alignItems="center">
+          <TextField id="outlined-basic" fullWidth label="answer goes here" />
       </Grid>
 
     {/* required? */}
@@ -132,11 +134,11 @@ export default function ItemCard() {
         container
         justify="flex-end"
         alignItems="center">
+          
           <Button><DeleteOutlineIcon margin="dense" fontSize="large"/></Button>
       </Grid>
-    </Grid>
+      </Grid>
     
     </CardContent></Card>
     );
-  }
-
+}
