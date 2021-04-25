@@ -7,6 +7,7 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import JoinOrCreate from "./pages/sign-up/join-or-create";
 import AdminDashboard from "./pages/admin/admin-dashboard";
 import SignUp from "./pages/sign-up/sign-up";
+import AdminSchedule from "./pages/admin/admin-create-schedule";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           />
           <Route path="/dashboard-admin" exact>
             <AdminDashboard />
+          </Route>
+          <Route path="/schedule-admin" exact>
+            <AdminSchedule />
           </Route>
         </Switch>
       </Router>
