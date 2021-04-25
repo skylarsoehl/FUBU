@@ -1,5 +1,5 @@
 import Sidebar from "../../core/components/core-sidebar";
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
@@ -139,19 +139,8 @@ const useStyles = makeStyles((theme) => ({
 
 function AdminDashboard() {
   const classes = useStyles();
-
-  const [modalState, setModalState] = React.useState(false);
-
-  useEffect(() => {
-    setModalState(true);
-    alert(
-      "setting up community space modal would pop up like this after page load"
-    );
-  }, []);
-
-  if (modalState) {
-    return "";
-  }
+  
+  setTimeout(function(){ alert("setting up community space modal would pop up like this after page load"); }, 500);
 
   return (
     <ThemeProvider theme={theme}>
