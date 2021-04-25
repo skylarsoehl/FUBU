@@ -1,11 +1,16 @@
 import Sidebar from "../../core/components/core-sidebar";
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import theme from "../../theme";
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
+
+import NextStepsModal from "./next-steps-modal";
+
+import { Link } from "react-router-dom";
+
 // import Card from '@material-ui/core/Card';
 // import CardActions from '@material-ui/core/CardActions';
 // import CardContent from '@material-ui/core/CardContent';
@@ -139,11 +144,16 @@ const useStyles = makeStyles((theme) => ({
 
 function AdminDashboard() {
   const classes = useStyles();
-  
-  setTimeout(function(){ alert("setting up community space modal would pop up like this after page load"); }, 500);
+
+  const [openDialog, setOpenDialog] = React.useState(false);
+
+  useEffect(() => {
+    setOpenDialog(true);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
+      {openDialog ? <NextStepsModal /> : null}
       <Grid container xs={12} className={classes.root}>
         <Grid container xs={2}>
           <Sidebar></Sidebar>
@@ -151,6 +161,8 @@ function AdminDashboard() {
         <Grid container xs={10}>
           <Grid item xs={12} className={classes.logoutRow}>
             <Button
+              component={Link}
+              to="/"
               className={classes.logout}
               variant="contained"
               size="large"
